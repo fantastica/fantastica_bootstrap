@@ -8,3 +8,10 @@ desc "Pings PING_URL to keep a dyno alive"
 		Net::HTTP.get_response(uri)
 	end
 end
+
+# heroku config:add PING_URL=http://fantasticabootstrap.herokuapp.com
+
+# heroku addons:add scheduler:standard
+# heroku addons:open scheduler
+
+# rake dyno_ping
